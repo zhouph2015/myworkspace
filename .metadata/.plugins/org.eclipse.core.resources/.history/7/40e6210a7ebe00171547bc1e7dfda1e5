@@ -1,0 +1,40 @@
+
+
+public class Web12306  implements Runnable{
+    private int num = 10;
+    
+    @Override
+    public void run(){
+        while(true){
+            if(num <= 0){
+                break;
+            }
+            test();
+        }
+       
+    }
+    
+    public void test(){
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName() + " has get ticket: " + num--);
+    }
+    
+    
+    public synchronized void test1(){
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName() + " has get ticket: " + num--);
+    }
+    
+    
+
+}

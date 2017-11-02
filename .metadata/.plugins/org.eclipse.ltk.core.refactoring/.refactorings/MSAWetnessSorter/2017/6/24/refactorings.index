@@ -1,0 +1,39 @@
+1497365257645	Delete element
+1497365262429	Delete element
+1497365332086	Delete element
+1497379164875	Rename type 'MetropolitanStatisticalArea'
+1497382221314	Rename package 'com.evariant.platform.maswetness.process'
+1497384136605	Move package
+1497384606884	Rename resource 'states.csv'
+1497392176994	Rename method 'getBufferedReaderWithoutHeader'
+1497396733841	Rename method 'readMSA'
+1497401254043	Rename field 'statesInfo'
+1497401271312	Rename field 'countyMSA'
+1497401289618	Rename field 'wbanList'
+1497452228877	Rename package 'com.evariant.platform.msawetness.util'
+1497465247467	Rename local variable 'precipitation'
+1497469308794	Rename method 'readPercip'
+1497469342398	Rename method 'retrievePrecipitation'
+1497536288025	Rename method 'calculate'
+1497537178051	Move source folder
+1497537333201	Move source folder
+1497537341188	Move 'java' to 'main'
+1497537585141	Delete element
+1497544438719	Rename local variable 'stateMap'
+1497544541506	Rename local variable 'states'
+1497544609891	Rename local variable 'countyPerMSA'
+1497544648290	Rename local variable 'wbanMaster'
+1497544756032	Rename method 'retrieveCounty'
+1497552040352	Rename local variable 'path'
+1497552069008	Rename local variable 'filePath'
+1497552602798	Rename local variable 'stateShortMap'
+1497552696233	Rename method 'retrieveCountyAndMSA'
+1497552730230	Rename method 'readWBAN'
+1497552795386	Rename method 'calculateWetnessPerMSA'
+1497553745526	Rename local variable 'CountyToMSApath'
+1497554532588	Rename type 'WBAN'
+1497556050206	Rename local variable 'path'
+1497556079561	Rename method 'getBufferedReader'
+1497559025522	Rename local variable 'path'
+1497560095073	Copy files
+1497572558799	Copy files

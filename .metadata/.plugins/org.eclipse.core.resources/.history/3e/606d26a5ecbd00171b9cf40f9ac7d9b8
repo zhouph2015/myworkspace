@@ -1,0 +1,11 @@
+
+
+public class RabbitApp {
+    
+    public static void main(String[] args){
+        
+        Rabbit rab = new Rabbit();
+        rab.start();
+    }
+
+}

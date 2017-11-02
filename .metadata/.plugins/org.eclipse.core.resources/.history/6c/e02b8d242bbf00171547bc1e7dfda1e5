@@ -1,0 +1,40 @@
+package com.bjsxt.server.demo1;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+    
+    private ServerSocket server;
+    
+    public static void main(String[] args) throws IOException{
+        Server server = new Server();
+        server.start();
+        server.receive();
+    }
+    
+    public void start() {
+        try {
+            server = new ServerSocket(8888);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+       
+    }
+    
+    public void receive(){
+        try {
+            Socket client = server.accept();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    
+    public void stop(){
+        
+    }
+
+}

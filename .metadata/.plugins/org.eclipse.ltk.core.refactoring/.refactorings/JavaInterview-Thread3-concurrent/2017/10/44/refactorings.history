@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 9 elements from project &apos;JavaInterview-Thread3-concurrent&apos;&#x0A;- Original project: &apos;JavaInterview-Thread3-concurrent&apos;&#x0A;- Original elements:&#x0A;     Call.java&#x0A;     JionDemo01.java&#x0A;     MyDeadLock.java&#x0A;     Programmer.java&#x0A;     ProgrammerApp.java&#x0A;     ProgrammerApp&#x0A;     Rabbit.java&#x0A;     RabbitApp.java&#x0A;     Tortise.java" description="Delete elements" element1="/src&lt;{JionDemo01.java" element2="/src&lt;{MyDeadLock.java" element3="/src&lt;{Call.java" element4="/src&lt;{Programmer.java" element5="/src&lt;{Rabbit.java" element6="/src&lt;{ProgrammerApp.java" element7="/src&lt;{RabbitApp.java" element8="/src&lt;{Tortise.java" elements="8" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1509477417286" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,13 @@
+package com.bjsxt.server.demo1;
+
+
+public class Response{
+    private StringBuilder headInfor;
+    public Response(){
+        headInfor = new StringBuilder();
+    }
+    
+   private void reateHeadInfor(int code){
+       
+   }
+}

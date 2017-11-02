@@ -1,0 +1,45 @@
+package com.bjsxt.server.demo1;
+
+import java.sql.Date;
+
+public class Response{
+    private StringBuilder headInfor;
+    private StringBuilder content;
+    public static final String CRLF="\r\n";
+    public static final String BLANK=" ";
+    private int len = 0;
+    public Response(){
+        headInfor = new StringBuilder();
+        content = new StringBuilder();
+        len = 0;
+    }
+    
+   private void reateHeadInfor(int code){
+       // PROTOCAL CODE
+       headInfor.append("HTTP/1.1").append(CRLF).append(BLANK).append(code).append(BLANK);
+       switch(code){
+           case 200:
+               headInfor.append("OK");
+               break;
+           case 404:
+               headInfor.append("Not Fund");
+               break;
+           case 505:
+               headInfor.append("Server error");
+               break;
+           
+       }
+       
+       headInfor.append(CRLF);
+       // RESPONSE HEDDER
+       headInfor.append("Server jbsge sgsg").append(CRLF);
+       // date
+       headInfor.append("Date:").append(new Date(12414214)).append(CRLF);
+       //
+       headInfor.append("Content-type:text/html;charset=GBK").append(CRLF);
+       // respose length
+       headInfor.append("Content-Length:").append(len).append(CRLF);
+       
+       headInfor.append(CRLF);
+   }
+}

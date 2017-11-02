@@ -1,0 +1,6 @@
+package care.com2;
+
+
+public interface Subject {
+
+}

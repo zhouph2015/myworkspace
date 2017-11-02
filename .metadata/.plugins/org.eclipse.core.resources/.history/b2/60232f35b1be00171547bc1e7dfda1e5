@@ -1,0 +1,35 @@
+
+
+public class SynDemo {
+    
+    public static void main(String[] args){
+        Jvm jvm1 = Jvm.getInstance();
+        Jvm jvm2 = Jvm.getInstance();
+        System.out.println(jvm1);
+        System.out.println(jvm2);
+        System.out.println(jvm1==jvm2);
+        
+    }
+
+}
+
+/*
+ * singleton model
+ * 1. priviate construct
+ * 2. private static variable
+ * 3. a public getInstance method
+ * 
+ */
+
+class Jvm{
+    private static Jvm instance = null;
+    private Jvm(){        
+    }
+    
+    public static Jvm getInstance(){
+        if(null == instance){
+            instance = new Jvm();
+        }       
+        return instance;
+    }
+}

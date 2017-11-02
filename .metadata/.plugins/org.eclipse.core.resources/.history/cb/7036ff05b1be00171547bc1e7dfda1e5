@@ -1,0 +1,26 @@
+
+
+public class SynDemo {
+    
+    public static void main(String[] args){
+        Jvm jvm1 = Jvm.getInstance();
+        Jvm jvm2 = Jvm.getInstance();
+        
+        System.out.println(jvm1==jvm2);
+        
+    }
+
+}
+
+class Jvm{
+    private static Jvm instance = null;
+    private Jvm(){        
+    }
+    
+    public static Jvm getInstance(){
+        if(null == instance){
+            instance = new Jvm();
+        }       
+        return instance;
+    }
+}

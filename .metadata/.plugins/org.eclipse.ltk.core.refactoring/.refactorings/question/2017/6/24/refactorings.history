@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;MSAWetnessSorter/src/test/resource&apos;&#x0A;- Original project: &apos;question&apos;&#x0A;- Destination element: &apos;MSAWetnessSorter/src/test/resource&apos;&#x0A;- Original elements:&#x0A;     wbanmasterlist.psv&#x0A;     CountyMSA.txt&#x0A;     states.csv&#x0A;     201505precip.txt" description="Copy files" destination="=MSAWetnessSorter/src\/test\/resource" element1="src/test/resources/wbanmasterlist.psv" element2="src/test/resources/CountyMSA.txt" element3="src/test/resources/states.csv" element4="src/test/resources/201505precip.txt" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1497384357612" units="0" version="1.0"/>
+</session>

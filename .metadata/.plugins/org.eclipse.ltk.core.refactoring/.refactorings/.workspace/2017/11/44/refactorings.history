@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JavaInterview-Thread3-singleton&apos; to &apos;JavaInterview-Thread4-singleton&apos;" description="Rename resource &apos;JavaInterview-Thread3-singleton&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/JavaInterview-Thread3-singleton" name="JavaInterview-Thread4-singleton" stamp="1509504704082" updateReferences="true"/>
+</session>

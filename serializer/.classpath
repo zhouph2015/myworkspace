@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/pinzhou/Downloads/jackson-core-2.8.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/pinzhou/Downloads/jackson-databind-2.8.5.jar"/>
+	<classpathentry kind="lib" path="/Users/pinzhou/Downloads/joda-time-2.9.6/joda-time-2.9.6-no-tzdb-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/pinzhou/Downloads/joda-time-2.9.6/joda-time-2.9.6-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/pinzhou/Downloads/joda-time-2.9.6/joda-time-2.9.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/pinzhou/Downloads/joda-time-2.9.6/joda-time-2.9.6-no-tzdb.jar"/>
+	<classpathentry kind="lib" path="/Users/pinzhou/Downloads/joda-time-2.9.6/joda-time-2.9.6.jar"/>
+	<classpathentry kind="lib" path="/Users/pinzhou/Downloads/jackson-annotations-2.1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
