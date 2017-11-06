@@ -27,7 +27,7 @@
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
 		<item value="508" key="DIALOG_WIDTH"/>
-		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
 		<item value="618" key="DIALOG_HEIGHT"/>
 		<item value="466" key="DIALOG_X_ORIGIN"/>
 		<item value="24" key="DIALOG_Y_ORIGIN"/>
@@ -47,10 +47,10 @@
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="519" key="DIALOG_WIDTH"/>
-		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
 		<item value="639" key="DIALOG_HEIGHT"/>
 		<item value="461" key="DIALOG_X_ORIGIN"/>
-		<item value="-63" key="DIALOG_Y_ORIGIN"/>
+		<item value="-158" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="RefactoringWizard.preview">
 		<item value="590" key="width"/>
@@ -91,6 +91,8 @@
 		<item value="false" key="create_package_info_java"/>
 	</section>
 	<section name="completion_proposal_size">
+		<item value="1023" key="size.y"/>
+		<item value="272" key="size.x"/>
 	</section>
 	<section name="JarPackageWizard">
 		<item value="false" key="JarPackageWizardPage.INCLUDE_DIRECTORY_ENTRIES"/>

@@ -1,0 +1,69 @@
+package com.bjsxt.server.demo3;
+
+/*
+ * a dispatcher per request
+ * 
+ * 
+ * */
+
+import java.io.IOException;
+import java.net.Socket;
+
+public class Dispatcher implements Runnable {
+    
+    
+    private Request req;
+    private Response rep;
+    private Socket client;
+    private int code = 200;
+    
+    Dispatcher(Socket client){
+        this.client = client;
+        try {
+            req = new Request(this.client.getInputStream());
+            rep = new Response(this.client.getOutputStream());
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            //e.printStackTrace();
+            code =500;
+            return;
+        }
+        //make response
+       
+    }
+
+    @Override
+    public void run() {
+        
+        
+        
+    
+        try {
+            Servlet serv = WebApp.getServlet(req.getUrl());
+            if(null == serv){
+                this.code = 404;
+            } else {
+                serv.service(req, rep);
+                rep.pushToClient(code);
+            }
+        } catch (Exception e2) {
+            // TODO Auto-generated catch block
+            e2.printStackTrace();
+            this.code=500;
+        }
+        try {
+            rep.pushToClient(code);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+        try {
+            client.close();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+}

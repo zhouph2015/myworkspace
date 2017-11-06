@@ -775,3 +775,11 @@ net.sf.eclipsecs.core.util.CheckstylePluginException: Failed to resolve RuleSet 
 2017-10-31 15:00:03,085 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
 2017-10-31 15:00:03,093 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-10-31 15:00:03,126 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-11-06 12:30:40,774 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-06 12:30:40,778 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/pinzhou/learning/systemdesign/event-drive/java-design-patterns/event-driven-architecture/src/main/resources
+2017-11-06 12:30:40,782 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-06 12:30:40,782 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/pinzhou/learning/systemdesign/event-drive/java-design-patterns/event-driven-architecture/src/test/resources
+2017-11-06 12:30:41,978 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-06 12:30:42,007 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-11-06 12:30:42,013 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-06 12:30:42,039 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources

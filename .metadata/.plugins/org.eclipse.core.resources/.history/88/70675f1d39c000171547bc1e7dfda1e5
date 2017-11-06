@@ -1,0 +1,16 @@
+package com.bjsxt.server.demo2;
+
+
+public class LoginServlet extends Servlet {
+    
+    @Override
+    public void doGet() throws Exception{
+        
+    }
+    
+    @Override
+    public void doPost() throws Exception{
+        
+    }
+
+}

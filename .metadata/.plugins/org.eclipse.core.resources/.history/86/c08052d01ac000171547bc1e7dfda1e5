@@ -1,0 +1,88 @@
+package com.bjsxt.server.demo1;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.sql.Date;
+
+public class Server2 {
+    
+    public static final String CRLF="\r\n";
+    public static final String BLANK=" ";
+    
+    private ServerSocket server;
+    
+    public static void main(String[] args) throws IOException{
+        Server2 server = new Server2();
+        server.start();
+        server.receive();
+    }
+    
+    public void start() {
+        try {
+            server = new ServerSocket(8888);
+            this.receive();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+       
+    }
+    
+    private void receive() {
+        try {
+            Socket client = server.accept();
+            String msg = null;
+            StringBuilder sb = new StringBuilder();
+           
+            byte[] data = new byte[20480];
+            int len = client.getInputStream().read(data);
+            String requestInfo =  new String(data, 0, len).trim();
+            
+            System.out.println(requestInfo);
+            
+            StringBuilder responseContext = new StringBuilder();
+            responseContext.append("<html><head><title>response title sample</title></head><body>Hellow tomcat</body></html>");
+            
+            StringBuilder resposne = new StringBuilder();
+            // PROTOCAL CODE
+            resposne.append("HTTP/1.1").append(CRLF).append(BLANK).append("200 OK").append(CRLF);
+            // RESPONSE HEDDER
+            resposne.append("Server jbsge sgsg").append(CRLF);
+            // date
+            resposne.append("Date:").append(new Date(12414214)).append(CRLF);
+            //
+            resposne.append("Content-type:text/html;charset=GBK").append(CRLF);
+            // respose length
+            resposne.append("Content-Length:").append(responseContext.toString().getBytes().length).append(CRLF);
+            
+            resposne.append(CRLF);
+            
+            resposne.append(responseContext);
+            
+            
+            
+            //output
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+            
+            bw.write(resposne.toString());
+            bw.flush();
+            bw.close();
+            
+    
+       
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    
+    public void stop(){
+        
+    }
+
+}

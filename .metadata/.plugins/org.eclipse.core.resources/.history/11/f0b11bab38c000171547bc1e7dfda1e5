@@ -1,0 +1,25 @@
+package com.bjsxt.server.demo2;
+
+import java.net.Socket;
+
+public class Servlet {
+    
+    public void service (Request req, Response rep){
+
+        rep.print("<html><head><title>response title sample</title></head><body>");
+        rep.print("Welcome: ").print(req.getParameterValue("uname")).print(" back");
+        rep.print("</body></html>");
+       
+    }
+
+    public void doGet() throws Exception {
+        // TODO Auto-generated method stub
+        
+    }
+
+    public void doPost() throws Exception {
+        // TODO Auto-generated method stub
+        
+    }
+
+}

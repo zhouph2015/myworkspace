@@ -1,0 +1,8 @@
+package com.bjsxt.server.demo2;
+
+
+public class WebApp {
+    private static ServletContext contexg;
+    
+
+}

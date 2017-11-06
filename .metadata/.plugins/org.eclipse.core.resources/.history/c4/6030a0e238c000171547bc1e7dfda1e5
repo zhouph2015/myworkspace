@@ -1,0 +1,24 @@
+package com.bjsxt.server.demo2;
+
+import java.net.Socket;
+
+public class Servlet {
+    
+    public void service (Request req, Response rep) throws Exception{
+       this.doGet();
+       this.doPost();
+  
+       
+    }
+
+    public void doGet() throws Exception {
+        // TODO Auto-generated method stub
+        
+    }
+
+    public void doPost() throws Exception {
+        // TODO Auto-generated method stub
+        
+    }
+
+}

@@ -1,0 +1,19 @@
+package com.bjsxt.server.demo2;
+
+
+public class RegisterServlet extends Servlet {
+    
+    @Override
+    public void doGet(Request req, Response rep) throws Exception{
+        rep.print("<html><head><title>response title sample</title></head><body>");
+        rep.print("Welcome: ").print(req.getParameterValue("uname")).print(" back");
+        rep.print("</body></html>");
+        
+    }
+    
+    @Override
+    public void doPost(Request req, Response rep) throws Exception{
+        
+    }
+
+}

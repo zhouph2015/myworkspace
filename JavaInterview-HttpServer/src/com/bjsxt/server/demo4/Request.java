@@ -1,0 +1,182 @@
+package com.bjsxt.server.demo4;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Array;
+import java.net.URLDecoder;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.StringTokenizer;
+
+public class Request {
+    private String method;
+    private String url;
+    
+    private Map<String, List<String>> parametersMapValues;
+    
+    public static final String CRLF="\r\n";
+    
+    private InputStream is;
+    private String requestInfo;
+    
+    
+    public Request(){
+        method="";
+        url="";
+        parametersMapValues = new HashMap<String, List<String>>();
+        requestInfo="";        
+    }
+    
+    
+    public Request(InputStream is){
+        this();
+        this.is=is;
+        byte[] data = new byte[20480];
+     
+        try {
+            int len = is.read(data);
+            requestInfo = new String(data, 0, len);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return;
+        }
+        // parse head informaiton
+        parseRequestInfor();
+        
+        
+    }
+    
+    private void parseRequestInfor(){
+        if(null == requestInfo || requestInfo.trim().equals("")){
+            return;
+        }
+        
+        /*parse the request method , url and parameters from the first line of headinformation
+         *  method: GET, POST
+         * 
+         */
+        
+        String paramString="";
+        
+        
+        String firstLine = requestInfo.substring(0,requestInfo.indexOf(CRLF));
+        int idx = firstLine.indexOf("/");
+        String urlStr = firstLine.substring(idx, firstLine.indexOf("HTTP/")).trim();
+        
+        this.method = firstLine.substring(0, idx).trim();
+        if(this.method.equalsIgnoreCase("post")){
+            
+            this.url = urlStr;
+            paramString = requestInfo.substring(requestInfo.lastIndexOf(CRLF)).trim();
+        } else if(this.method.equalsIgnoreCase("get")){
+            if(urlStr.contains("?")){
+                String [] urlArray = urlStr.split("\\?");
+                this.url = urlArray[0];
+                paramString = urlArray[1];
+                
+            } else {
+                this.url=urlStr;
+            }
+            
+        }
+        
+        if( paramString.equals("")){
+            return;
+        }
+        
+        parseParams(paramString);
+        
+    }
+    
+    private void parseParams(String paraString) {
+
+        StringTokenizer token = new StringTokenizer(paraString, "&");
+        while (token.hasMoreTokens()) {
+            String keyValue = token.nextToken();
+            String[] keyValues = keyValue.split("=");
+            if(keyValues.length==2){
+                
+            }else if (keyValues.length==1){
+                keyValues = Arrays.copyOf(keyValues, 2);
+                keyValues[1] = null;
+                
+            }
+            String key = keyValues[0];
+            String value = null == keyValues[1]? null:decode(keyValues[1].trim(), "gbk");
+            if(! parametersMapValues.containsKey(keyValues[0])){
+                parametersMapValues.put(key, new ArrayList<String>());  
+            }
+            List<String> values = parametersMapValues.get(key);
+            values.add(value);
+            
+        }
+    }
+    
+    private String decode(String value, String code){
+        
+        try {
+           return  URLDecoder.decode(value,code);
+        } catch (UnsupportedEncodingException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+        return null;
+    }
+    
+    /*
+     * 
+     */
+    public String[] getParameterValues(String name){
+        List<String> values = null;
+        if( (values=parametersMapValues.get(name)) == null){
+            return null;
+        } else{
+            return values.toArray(new String[0]);
+        }
+    }
+    
+    /*
+     * 
+     * 
+     * */
+    public String getParameterValue(String name){
+        String[] values = getParameterValues(name);
+        if(null== values){
+            return null;
+        }
+        return values[0];  
+    }
+
+
+    
+    public String getUrl() {
+        return url;
+    }
+
+
+    
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+}

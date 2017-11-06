@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servlet>
+   
+	<name>login</name>
+	<servlet-name>com.bjsxt.server.demo4.LoginServlet</servlet-name></servlet>
+
